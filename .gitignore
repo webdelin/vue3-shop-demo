@@ -1,0 +1,23 @@
+.env
+.DS_Store
+node_modules
+/storage/*
+/dist
+hs_err_*
+hs_err_*.log
+# local env files
+.env.local
+.env.*.local
+__OLD
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
