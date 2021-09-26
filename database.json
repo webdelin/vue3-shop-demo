@@ -1,0 +1,239 @@
+{
+    "products": [{
+            "id": "1",
+            "count": 13,
+            "title": "Apfel",
+            "category": "fruits",
+            "price": 99,
+            "img": "https://images.grocery.yandex.net/2783132/a14b43cfbbac4898b5a89fd1e52c0029/300x300.png"
+        },
+        {
+            "id": "2",
+            "count": 15,
+            "title": "Birne",
+            "category": "fruits",
+            "price": 159,
+            "img": "https://images.grocery.yandex.net/2805921/631c3a283a994a80820c216ec51f139d/300x300.png"
+        },
+        {
+            "id": "3",
+            "count": 14,
+            "title": "Orange",
+            "category": "fruits",
+            "price": 149,
+            "img": "https://stockmeier-food.ru/wp-content/uploads/2019/07/apelsin.jpg"
+        },
+        {
+            "id": "4",
+            "count": 0,
+            "title": "Nektarine",
+            "category": "fruits",
+            "price": 200,
+            "img": "https://cdn-irec.r-99.com/sites/default/files/imagecache/300o/product-images/13250/1280575364_nectarin.jpg"
+        },
+        {
+            "id": "5",
+            "count": 15,
+            "title": "Gurke",
+            "category": "vegetable",
+            "price": 79,
+            "img": "https://images.grocery.yandex.net/2750890/33686ff02aa44c7cb4bcb551b42f851a/300x300.png"
+        },
+        {
+            "id": "6",
+            "count": 14,
+            "title": "Tomaten",
+            "category": "vegetable",
+            "price": 129,
+            "img": "https://images.grocery.yandex.net/2756334/e97aaa365384455c84dbfa3691c330f1/300x300.png"
+        },
+        {
+            "id": "7",
+            "count": 11,
+            "title": "Rote Bete",
+            "category": "vegetable",
+            "price": 19,
+            "img": "https://images.grocery.yandex.net/2756334/33a66b51989449f9918122a775885fbc/300x300.png"
+        },
+        {
+            "id": "8",
+            "count": 12,
+            "title": "Aubergine",
+            "category": "vegetable",
+            "price": 189,
+            "img": "https://images.grocery.yandex.net/2756334/cbb08819de08460a9131a86c627bed92/300x300.png"
+        },
+        {
+            "id": "9",
+            "count": 14,
+            "title": "Rindfleisch",
+            "category": "meat",
+            "price": 519,
+            "img": "https://images.grocery.yandex.net/2791769/01fa0c414a1d406da8db8f9a103f752d/300x300.png"
+        },
+        {
+            "id": "10",
+            "count": 17,
+            "title": "Schweinefleisch",
+            "category": "meat",
+            "price": 459,
+            "img": "https://турFleischво.рф/wp-content/uploads/2018/08/%D0%A4%D0%B8%D0%BB%D0%B5-%D1%81%D0%B2%D0%B8%D0%BD%D0%B8%D0%BD%D0%B0-300x300.jpg"
+        },
+        {
+            "id": "11",
+            "count": 16,
+            "title": "Ente",
+            "category": "meat",
+            "price": 890,
+            "img": "https://myaso-1.ru/wp-content/uploads/2020/02/60588.jpg"
+        },
+        {
+            "id": "12",
+            "count": 14,
+            "title": "Hänchenfleich",
+            "category": "meat",
+            "price": 190,
+            "img": "https://produktoff.com/static/upload/goods/21/72421_original.jpg"
+        },
+        {
+            "id": "13",
+            "count": 12,
+            "title": "Forellen",
+            "category": "fish",
+            "price": 299,
+            "img": "https://images.grocery.yandex.net/2750890/c22be040fc034226aee10d52972db879/300x300.png"
+        },
+        {
+            "id": "14",
+            "count": 0,
+            "title": "Thunfisch",
+            "category": "fish",
+            "price": 159,
+            "img": "https://images.grocery.yandex.net/2805921/76b31b25e00748b290a44c03e279440c/300x300.png"
+        },
+        {
+            "id": "15",
+            "count": 13,
+            "title": "Dorschs",
+            "category": "fish",
+            "price": 429,
+            "img": "https://images.grocery.yandex.net/2805921/b4f8c7add9874804acfae734534e1409/300x300.png"
+        },
+        {
+            "id": "16",
+            "count": 10,
+            "title": "Beluga",
+            "category": "fish",
+            "price": 1200,
+            "img": "https://olimp-fish.ru/wp-content/uploads/2020/04/%D1%84%D0%B8%D0%BB%D0%B5-%D1%82%D1%80%D0%B5%D1%81%D0%BA%D0%B8-300x300.jpg"
+        },
+        {
+            "id": "17",
+            "count": 121,
+            "title": "Rosmarin",
+            "category": "greens",
+            "price": 169,
+            "img": "https://images.grocery.yandex.net/2756334/09072b2d38ff4b9391f89a2b37a83053/300x300.png"
+        },
+        {
+            "id": "18",
+            "count": 13,
+            "title": "Spinat",
+            "category": "greens",
+            "price": 69,
+            "img": "https://images.grocery.yandex.net/2783132/1e72718cfd11452a8ed4ed04aee8c033/300x300.png"
+        },
+        {
+            "id": "19",
+            "count": 13,
+            "title": "Petersilie",
+            "category": "greens",
+            "price": 39,
+            "img": "https://images.grocery.yandex.net/2756334/6f87c8ecea5b4fb98601b901cbcf0b6f/300x300.png"
+        },
+        {
+            "id": "20",
+            "count": 0,
+            "title": "Dill",
+            "category": "greens",
+            "price": 35,
+            "img": "https://images.grocery.yandex.net/2805921/a00ffda9ddca4defa055fd4e6719f4c7/300x300.png"
+        },
+        {
+            "id": "21",
+            "count": 11,
+            "title": "Minze",
+            "category": "greens",
+            "price": 99,
+            "img": "https://images.grocery.yandex.net/2998515/dc4c4582962e48589147b830c30cebe8/300x300.png"
+        },
+        {
+            "id": "22",
+            "count": 15,
+            "title": "Koriander",
+            "category": "greens",
+            "price": 55,
+            "img": "https://images.grocery.yandex.net/2888787/0fd625d240034c8282faff2b4ea677e3/300x300.png"
+        },
+        {
+            "id": "23",
+            "count": 10,
+            "title": "Erdbeere",
+            "category": "berries",
+            "price": 299,
+            "img": "https://images.grocery.yandex.net/2805921/af2033d4ef3b4645abd19cd21e408695/300x300.png"
+        },
+        {
+            "id": "24",
+            "count": 10,
+            "title": "Blaubeere",
+            "category": "berries",
+            "price": 249,
+            "img": "https://images.grocery.yandex.net/2756334/569d8814c1e548b0b4945e7bc4cd912a/300x300.png"
+        },
+        {
+            "id": "25",
+            "count": 15,
+            "title": "Weintraube",
+            "category": "berries",
+            "price": 139,
+            "img": "https://images.grocery.yandex.net/2783132/4e13bf22837b45b59fd4b3e611d5fedf/300x300.png"
+        }
+    ],
+    "categories": [{
+            "type": "vegetable",
+            "title": "Gemüse",
+            "id": "2"
+        },
+        {
+            "type": "meat",
+            "title": "Fleisch",
+            "id": "3"
+        },
+        {
+            "type": "fish",
+            "title": "Fisch",
+            "id": "4"
+        },
+        {
+            "type": "greens",
+            "title": "Kreuter",
+            "id": "5"
+        },
+        {
+            "type": "berries",
+            "title": "Beeren",
+            "id": "6"
+        },
+        {
+            "title": "Nüsse",
+            "type": "nuts",
+            "id": "VzYVWCc"
+        },
+        {
+            "title": "Obst",
+            "type": "fruits",
+            "id": "kQCnyJc"
+        }
+    ]
+}

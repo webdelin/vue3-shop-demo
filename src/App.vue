@@ -1,21 +1,22 @@
 <template>
-  <component :is="`${layout}-layout`" v-if="layout"/>
+  <component :is="layout + '-layout'" v-if="layout" />
 </template>
+
 <script>
 import {computed} from 'vue'
-import { useRoute } from "vue-router";
-import DefaultLayout from "@/layout/DefaultLayout";
-import EmptyLayout from "@/layout/EmptyLayout";
+import {useRoute} from 'vue-router'
+import MainLayout from './layout/MainLayout'
+import AuthLayout from './layout/AuthLayout'
+import AdminLayout from './layout/AdminLayout'
+
 export default {
   setup() {
-    const route = useRoute();
+    const route = useRoute()
+
     return {
-      layout:computed(() =>route.meta.layout)
+      layout: computed(() => route.meta.layout)
     }
   },
-  components: {
-    DefaultLayout,
-    EmptyLayout,
-  },
-};
+  components: {MainLayout, AuthLayout, AdminLayout}
+}
 </script>

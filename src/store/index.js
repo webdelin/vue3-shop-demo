@@ -1,42 +1,37 @@
-import { createStore, createLogger } from 'vuex'
+import {createStore, createLogger} from 'vuex'
+import auth from './modules/auth.module'
+import product from './modules/product.module'
+import category from './modules/category.module'
+import cart from './modules/cart.module'
+import order from './modules/order.module'
+
 const plugins = []
+
 if (process.env.NODE_ENV === 'development') {
-    plugins.push(createLogger())
+  plugins.push(createLogger())
 }
-import auth from './modules/auth'
-import request from './modules/request'
+
 export default createStore({
-    plugins,
-    state() {
-        return {
-            alertMessage: null,
-            sidebar: false
-        }
-    },
-    mutations: {
-        SET_MESSAGE(state, message) {
-            state.alertMessage = message
-        },
-        CLEAR_MESSAGE(state) {
-            state.alertMessage = null
-        },
-        OPEN_SIDEBAR(state) {
-            state.sidebar = true
-        },
-        CLOSE_SIDEBAR(state) {
-            state.sidebar = false
-        }
-    },
-    actions: {
-        SET_MESSAGE({ commit }, message) {
-            commit('SET_MESSAGE', message)
-            setTimeout(() => {
-                commit('CLEAR_MESSAGE')
-            }, 5000)
-        }
-    },
-    modules: {
-        auth,
-        request
+  plugins,
+  state() {
+    return {
+      message: null,
     }
+  },
+  mutations: {
+    setMessage(state, message) {
+      state.message = message
+    },
+    clearMessage(state) {
+      state.message = null
+    }
+  },
+  actions: {
+    setMessage({commit}, message) {
+      commit('setMessage', message)
+
+      setTimeout(() => commit('clearMessage'), 3000)
+    }
+  },
+  modules: {auth, product, category, cart, order}
 })

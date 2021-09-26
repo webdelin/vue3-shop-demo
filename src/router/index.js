@@ -1,76 +1,104 @@
-import {
-    createRouter,
-    createWebHistory
-} from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router'
 import store from '../store'
-import Home from '../views/Home.vue'
 
-const routes = [{
-        path: '/',
-        name: 'Home',
-        component: Home,
-        meta: {
-            layout: 'default',
-            auth: true
-        }
+const routes = [
+  {
+    path: '/',
+    name: 'Shop',
+    component: () => import('../views/Shop.vue'),
+    meta: {layout: 'main', auth: false}
+  },
+  {
+    path: '/product/:id',
+    name: 'Product',
+    component: () => import('../views/Product.vue'),
+    meta: {layout: 'main', auth: false}
+  },
+  {
+    path: '/cart',
+    name: 'Cart',
+    component: () => import('../views/Cart.vue'),
+    meta: {layout: 'main', auth: false}
+  },
+  {
+    path: '/auth',
+    name: 'Auth',
+    component: () => import('../views/Auth.vue'),
+    meta: {layout: 'auth', auth: false}
+  },
+  {
+    path: '/thanks',
+    name: 'Thanks',
+    component: () => import('../views/Thanks.vue'),
+    meta: {layout: 'main', auth: false}
+  },
+  {
+    path: '/admin',
+    name: 'Admin',
+    redirect: {name: 'AdminProducts'},
+    component: () => import('../views/admin/Admin.vue'),
+    meta: {
+      admin: true,
+      layout: 'admin'
     },
-    {
-        path: '/message',
-        name: 'Message',
-        component: () =>
-            import ('../views/About.vue'),
-        meta: {
-            layout: 'default',
-            auth: true
-        }
-    },
-    {
-        path: '/hilfe',
-        name: 'Hilfe',
-        component: () =>
-            import ('../views/Hilfe.vue'),
-        meta: {
-            layout: 'default',
-            auth: true
-        }
-    },
-    {
-        path: '/details/:id',
-        name: 'Details',
-        component: () =>
-            import ('../views/Details.vue'),
-        meta: {
-            layout: 'default',
-            auth: true
-        }
-    },
-    {
-        path: '/login',
-        name: 'Login',
-        component: () =>
-            import ('../views/Login.vue'),
-        meta: {
-            layout: 'empty',
-            auth: false
-        }
-    }
+    children: [
+      {
+        path: 'products',
+        name: 'AdminProducts',
+        component: () => import('../views/admin/Products.vue')
+      },
+      {
+        path: 'playground',
+        name: 'Playground',
+        component: () => import('../views/admin/Playground.vue')
+      },
+      {
+        path: 'categories',
+        name: 'AdminCategories',
+        component: () => import('../views/admin/Categories.vue')
+      },
+      {
+        path: 'orders',
+        name: 'AdminOrders',
+        component: () => import('../views/admin/Orders.vue')
+      },
+      {
+        path: 'product/:id',
+        name: 'AdminProduct',
+        component: () => import('../views/admin/Product.vue')
+      }
+    ]
+  }
 ]
 
 const router = createRouter({
-    history: createWebHistory(process.env.BASE_URL),
-    routes,
-    linkActiveClass: 'active',
-    linkExactActiveClass: 'active'
+  history: createWebHistory(process.env.BASE_URL),
+  routes,
+  linkActiveClass: 'active',
+  linkExactActiveClass: 'active'
 })
+
 router.beforeEach((to, from, next) => {
-    const requireAuth = to.meta.auth
-    if (requireAuth && store.getters['auth/IS_AUTHENTICATED']) {
-        next()
-    } else if (requireAuth && !store.getters['auth/IS_AUTHENTICATED']) {
-        next('/login?message=login')
+  const requireAuth = to.meta.auth
+  const requireAdmin = to.meta.admin
+
+  if (requireAdmin) {
+    if (store.getters['auth/isAdmin']) {
+      return next()
     } else {
-        next()
+      return next('/auth?message=admin')
     }
+  }
+
+  if (requireAuth) {
+    if (store.getters['auth/isAuthenticated']) {
+      return next()
+    } else {
+      return next('/auth?message=auth')
+    }
+  }
+
+  next()
 })
 
 export default router

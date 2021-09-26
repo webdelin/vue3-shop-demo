@@ -1,56 +1,58 @@
-import {
-    computed,
-    watch
-} from 'vue'
+import { useField, useForm } from 'vee-validate'
 import * as yup from 'yup'
-import { useStore } from 'vuex';
-import { useRouter } from 'vue-router';
-import {
-    useField,
-    useForm
-} from "vee-validate";
+import { computed, watch } from 'vue'
+import { useStore } from 'vuex'
+import { useRouter } from 'vue-router'
+
 export function useLoginForm() {
     const store = useStore()
     const router = useRouter()
-    const {
-        handleSubmit,
-        isSubmitting,
-        submitCount
-    } = useForm()
-    const minLang = 6
-    const isToMAnyAttemps = computed(() => submitCount.value >= 3)
-    const {
-        value: email,
-        errorMessage: emailError,
-        handleBlur: emailBlur,
-    } = useField("email", yup.string().trim().required('Bitte email eintragen').email('Richtige Email eintragen'));
-    const {
-        value: password,
-        errorMessage: passwordError,
-        handleBlur: passwordBlur,
-    } = useField("password", yup.string().trim().required('Bitte password eingeben').min(minLang, 'Password sollte mindestens ' + minLang + ' zeichen sein (' + computed(() => password) + ')'));
-    watch(isToMAnyAttemps, val => {
-        if (val) {
-            setTimeout(() => submitCount.value = 0, 3000)
-        }
-    })
-    const onSubmit = handleSubmit(async val => {
-        try {
-            await store.dispatch('auth/LOGIN', val)
-            router.push('/')
-        } catch (e) {
+    const { handleSubmit, isSubmitting, submitCount } = useForm()
 
+    const { value: email, errorMessage: eError, handleBlur: eBlur } = useField(
+        'email',
+        yup
+        .string()
+        .trim()
+        .required('Bitte geben Sie email ein')
+        .email('Sie müssen eine gültige E-Mail eingeben')
+    )
+
+    const MIN_LENGTH = 6
+
+    const { value: password, errorMessage: pError, handleBlur: pBlur } = useField(
+        'password',
+        yup
+        .string()
+        .trim()
+        .required('Bitte geben Sie das Passwort ein')
+        .min(MIN_LENGTH, `Das Passwort darf nicht kleiner als ${MIN_LENGTH} zeichen sein`)
+    )
+
+    const isTooManyAttempts = computed(() => submitCount.value >= 3)
+
+    watch(isTooManyAttempts, val => {
+        if (val) {
+            setTimeout(() => submitCount.value = 0, 1500)
         }
     })
+
+    const onSubmit = handleSubmit(async values => {
+        try {
+            await store.dispatch('auth/login', values)
+            router.push({ name: 'Admin' })
+        } catch (e) {}
+    })
+
     return {
         email,
-        emailError,
-        emailBlur,
         password,
-        passwordError,
-        passwordBlur,
+        eError,
+        pError,
+        eBlur,
+        pBlur,
         onSubmit,
         isSubmitting,
-        isToMAnyAttemps
-    };
+        isTooManyAttempts
+    }
 }
