@@ -1,4 +1,4 @@
-import axios from '../../axios/dbase'
+import axios from 'axios'
 import { transform } from '../../utils/transform'
 
 export default {
@@ -23,7 +23,7 @@ export default {
     actions: {
         async create({ commit, dispatch }, payload) {
             try {
-                const { data } = await axios.post(`/products.json`, payload)
+                const { data } = await axios.post(`https://webdelin.github.io/vue3-shop-demo/products.json`, payload)
                 commit('addProduct', {...payload, id: data.name })
                 dispatch('setMessage', {
                     value: 'Artikel erfolgreich erstellt',
@@ -38,7 +38,7 @@ export default {
         },
         async load({ commit }) {
             try {
-                const { data } = await axios.get(`/products.json`)
+                const { data } = await axios.get(`https://webdelin.github.io/vue3-shop-demo/products.json`)
                 commit('setProducts', transform(data))
             } catch (e) {
                 commit('setMessage', {
@@ -49,7 +49,7 @@ export default {
         },
         async loadOne({ commit, dispatch }, id) {
             try {
-                const { data } = await axios.get(`/products/${id}.json`)
+                const { data } = await axios.get(`https://webdelin.github.io/vue3-shop-demo/products/${id}.json`)
                 return {...data, id }
             } catch (e) {
                 dispatch('setMessage', {
@@ -60,7 +60,7 @@ export default {
         },
         async remove({ dispatch }, id) {
             try {
-                await axios.delete(`/products/${id}.json`)
+                await axios.delete(`https://webdelin.github.io/vue3-shop-demo/products/${id}.json`)
                 dispatch('setMessage', {
                     value: 'Artikel gelöscht',
                     type: 'primary'
@@ -74,7 +74,7 @@ export default {
         },
         async update({ dispatch }, product) {
             try {
-                const { data } = await axios.put(`/products/${product.id}.json`, product)
+                const { data } = await axios.put(`https://webdelin.github.io/vue3-shop-demo/products/${product.id}.json`, product)
                 dispatch('setMessage', {
                     value: 'Товар обновлен',
                     type: 'primary'
