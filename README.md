@@ -1,6 +1,8 @@
 # vue3 Demoshop 
 
-### Demo: <a href="https://vue3-demo-shop.netlify.app/" target="_blank">VUE3 Demoshop</a>
+### Demo: [VUE3 Demoshop](https://webdelin.github.io/vue3-shop-demo/){target="_blank"}
+
+LocalStogare + Axios + Store
 
 ## Project setup
 ```
