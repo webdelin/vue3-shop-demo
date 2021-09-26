@@ -1,6 +1,6 @@
 <template>
   <form @submit.prevent="login">
-    <h4>Um ihren Einkauf abzuschließen<br>Bitte melden Sie sich an oder erstellen Sie eine Neu Konto.</h4>
+    <h4>Um ihren Einkauf abzuschließen<br>Bitte melden Sie sich an oder erstellen Sie zunächst ein neues Konto.</h4>
     <h4 style="color:red;">Diese Funktion ist deaktiviert</h4>
 
     <div class="form-control">
