@@ -1,4 +1,4 @@
-# vue-practice-app
+# vue3 Demoshop 
 
 ## Project setup
 ```

@@ -6,11 +6,13 @@
     "start": "concurrently \"npm run serve\" \"npm run dbase\"",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "dbase": "json-server --watch db.json --port 3004"
+    "dbase": "json-server --watch db.json --port 3004",
+    "deploy": "sh deploy.sh"
   },
   "dependencies": {
     "axios": "^0.21.1",
     "core-js": "^3.6.5",
+    "http-server": "^13.0.2",
     "lodash.chunk": "^4.2.0",
     "register-service-worker": "^1.7.1",
     "sass-loader": "^10.1.1",
