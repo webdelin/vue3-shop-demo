@@ -7,7 +7,7 @@
         <small>{{user.email}}</small>
       </li>
       <li>
-        <router-link to="/">Laden</router-link>
+        <router-link to="/">Produkte</router-link>
       </li>
       <li>
         <router-link to="/cart">
