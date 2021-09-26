@@ -1,6 +1,6 @@
 <template>
   <nav class="navbar">
-    <h3><router-link to="/" title="Vue-3 Lebensmittel Shop">Vue 3 Demoshop</router-link></h3>
+    <h4><router-link to="/" title="Vue-3 Lebensmittel Shop">Vue 3 Demoshop</router-link></h4>
 
     <ul class="navbar-menu">
       <li v-if="isAuth">

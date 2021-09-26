@@ -21,7 +21,7 @@ npm run serve
 npm run build
 ```
 
-### Compiles and minifies for production for Github Pages -> gh-pages
+### Compiles and minifies for production to Github Pages -> gh-pages
 edite deploy.sh change your github repository -> https://github.com/webdelin/vue3-shop-demo.git
 ```
 npm run deploy
