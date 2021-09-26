@@ -1,0 +1,36 @@
+[{
+        "type": "vegetable",
+        "title": "Gemüse",
+        "id": "2"
+    },
+    {
+        "type": "meat",
+        "title": "Fleisch",
+        "id": "3"
+    },
+    {
+        "type": "fish",
+        "title": "Fisch",
+        "id": "4"
+    },
+    {
+        "type": "greens",
+        "title": "Kreuter",
+        "id": "5"
+    },
+    {
+        "type": "berries",
+        "title": "Beeren",
+        "id": "6"
+    },
+    {
+        "title": "Nüsse",
+        "type": "nuts",
+        "id": "VzYVWCc"
+    },
+    {
+        "title": "Obst",
+        "type": "fruits",
+        "id": "kQCnyJc"
+    }
+]
