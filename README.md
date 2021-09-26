@@ -1,8 +1,10 @@
 # vue3 Demoshop 
 
-### Demo: <a href="https://webdelin.github.io/vue3-shop-demo" target="_blank" rel="noopener"><span>VUE3 Demoshop</span> </a>.
+### Demo: <a href="https://webdelin.github.io/vue3-shop-demo" target="_blank" rel="noopener"><span>VUE3 Demoshop</span></a>.
 
-LocalStogare + Axios + Store
+LocalStogare + Axios + Store/Vuex4
+
+<a href="https://webdelin.github.io/vue3-shop-demo" onclick="return ! window.open(this.href);">VUE3 Demoshop</a>
 
 ## Project setup
 ```
