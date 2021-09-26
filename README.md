@@ -1,6 +1,6 @@
 # vue3 Demoshop 
 
-### Demo: [VUE3 Demoshop](https://webdelin.github.io/vue3-shop-demo/){target="_blank"}
+### Demo: [VUE3 Demoshop](https://webdelin.github.io/vue3-shop-demo/){:target="_blank" rel="noopener"}
 
 LocalStogare + Axios + Store
 
