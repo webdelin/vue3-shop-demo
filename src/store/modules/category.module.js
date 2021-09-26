@@ -1,4 +1,4 @@
-import axios from 'axios'
+import axios from '../../axios/dbase'
 import store from '../index'
 import { transform } from '../../utils/transform'
 
@@ -22,15 +22,15 @@ export default {
     },
     actions: {
         async load({ commit }) {
-            const { data } = await axios.get(`https://webdelin.github.io/vue3-shop-demo/categories.json`)
+            const { data } = await axios.get(`/categories.json`)
             commit('setCategories', transform(data))
         },
         async create({ commit }, body) {
-            const { data } = await axios.post(`https://webdelin.github.io/vue3-shop-demo/categories.json`, body)
+            const { data } = await axios.post(`/categories.json`, body)
             commit('addCategory', {...body, id: data.name })
         },
         async remove({ commit }, id) {
-            await axios.delete(`https://webdelin.github.io/vue3-shop-demo/categories/${id}.json`)
+            await axios.delete(`/categories/${id}.json`)
             commit('removeCategory', id)
         }
     },

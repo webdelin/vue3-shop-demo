@@ -3,7 +3,7 @@ import store from '../store'
 import router from '../router'
 
 const baseAxios = axios.create({
-    baseURL: process.env.VUE_APP_DBASE
+    baseURL: 'https://webdelin.github.io/vue3-shop-demo'
 })
 
 baseAxios.defaults.params = {}
