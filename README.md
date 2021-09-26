@@ -21,5 +21,11 @@ npm run serve
 npm run build
 ```
 
+### Compiles and minifies for production for Github Pages -> gh-pages
+edite deploy.sh change your github repository -> https://github.com/webdelin/vue3-shop-demo.git
+```
+npm run deploy
+```
+
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
